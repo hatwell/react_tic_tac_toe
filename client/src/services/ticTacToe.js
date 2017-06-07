@@ -1,5 +1,5 @@
 var TicTacToe = function(){
-  this.board = ['', '', '', '', '', '', '', '', '']
+  this.board = ['f', '', '', '', '', '', '', '', '']
   this.turnCounter = 0;
 
 }

@@ -8,14 +8,17 @@ class Cell extends React.Component {
   render(){
     return(
       <div className="cellContents" onClick={this.clickFunction.bind(this)}>
-
-        <button onClick={this.clickFunction.bind(this)}>hi</button>
+        <button onClick={this.clickFunction.bind(this)}>
+          {this.props.children}
+        </button>
       </div>
     );
   }
 
   clickFunction(){
-    console.log("i have been clicked")
+    var position = this.props.id;
+    console.log(position);
+    this.props.clicked(position);
   }
 }
 
