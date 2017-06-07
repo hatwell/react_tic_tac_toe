@@ -1,27 +1,26 @@
 import React from 'react';
-import Cell from './Cell'
+import Cell from './Cell.jsx'
+
 
 class Board extends React.Component {
   constructor(props){
     super(props)
       this.state= ({
-        board: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+        board: [' ', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
       })
-      this.createBoard = this.createBoard.bind(this)
+
   }
 
   render(){
-    return  (
-      board.forEach(function(value){
-        <Cell>{value}</Cell>
-  })
-)}
+    var cells = this.state.board.map(function(value, index){
+                  return <Cell id={index} className="cell col-md-2">{value}</Cell>
+                })
+      console.log(cells)
+    return (
+      <div>{cells}</div>
+  )
+}
 
-  // createBoard(board){
-  //   board.forEach(function(value){
-  //     <Cell>{value}</Cell>
-  //   })
-  // }
 }
 
 export default Board;

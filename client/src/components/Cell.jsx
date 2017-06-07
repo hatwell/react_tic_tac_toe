@@ -7,10 +7,15 @@ class Cell extends React.Component {
 
   render(){
     return(
-      <div className="cellContents">
-        <p>{this.props.value}</p>
+      <div className="cellContents" onClick={this.clickFunction.bind(this)}>
+
+        <button onClick={this.clickFunction.bind(this)}>hi</button>
       </div>
     );
+  }
+
+  clickFunction(){
+    console.log("i have been clicked")
   }
 }
 
