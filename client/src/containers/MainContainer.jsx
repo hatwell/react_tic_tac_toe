@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-class BoardContainer extends React.Component {
+class MainContainer extends React.Component {
   constructor(props){
     super(props);
     this.state = {};
@@ -10,11 +10,11 @@ class BoardContainer extends React.Component {
   render(){
     return (
       <div>
-        <h2>Board Container</h2>
+        <h2>Main container</h2>
 
       </div>
     );
   }
 }
 
-export default BoardContainer;
+export default MainContainer;
